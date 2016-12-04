@@ -41,7 +41,7 @@
 }
 
 html{
-	font-family: 'Raleway', Arial, sans-serif;
+	font-family: 'Raleway', Arial;
 }
 
 .clearfix:before, .clearfix:after{
@@ -64,14 +64,79 @@ header{
 	line-height: 40px;
 	top:0;
 	color: #FFF;
-	opacity: 0.1;
 	transition-duration: 200ms;
 	z-index:999;
 }
-
-header:hover{
-	opacity: 1;
+#on-off-button{
+	background-image: url("../images/off.png");
+	background-size: cover;
+	height: 22px;
+	width: 22px;
+	position: fixed;
+	top: 9px;
+	left: 9px;
+	z-index: 1000;
 }
+header ol{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	font-size:18px;
+	height: 40px;
+	line-height:40px;
+	text-align:center;
+	color: #FFF;
+	float: right;
+}
+
+header ol > li {
+	float:left;
+	background-color:#000;
+}
+
+header ol > li:first-child{
+	padding:0 50px;
+}
+
+header ol > li:nth-child(2){
+	padding-right:50px;
+}
+
+header ol ul li{
+	list-style: none;
+	text-align: left;
+}
+
+header ol > li > ul {
+	height:130px;
+	position:absolute;
+	z-index: 999;
+	background-color: #000;
+	margin-left: -35px;
+	margin-top: 20px;
+	display: none;
+}
+
+header ol > li > ul:before {
+	content: "";
+	height:24px;
+	width: 24px;
+	position: absolute;
+	top:-12px;
+	background-color: #000;
+	right:0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	transform: rotate(45deg);
+}
+
+header ol > li > ul li{
+	width: 150px;
+	padding: 2px 15px;
+	text-transform: none;
+}
+
 
 .container{
 	max-width: 1100px;
@@ -85,20 +150,6 @@ header:hover{
 #logo-top{
 	float: left;
 	font-weight: 900;
-}
-
-nav ul{
-	float: right;
-}
-
-nav ul li{
-	display: inline;
-	line-height: 40px;
-	font-weight: 600;
-}
-
-nav ul li:nth-child(2){
-	padding: 0 30px;
 }
 
 #top{
@@ -159,9 +210,13 @@ nav ul li:nth-child(2){
 	border-radius: 10px;
 	
 }
-
+#top-center button:hover{
+	background-color: #FFF;
+	color: #27c7ab;
+	transition-duration: 200ms;
+}
 .slidernav{
-	font-size: 70px;
+	font-size: 90px;
 	font-weight: 900;
 	z-index: 3;
 }
@@ -186,7 +241,7 @@ nav ul li:nth-child(2){
 }
 
 #chairs{
-	height: 400px;
+	height: 330px;
 }
 
 #chairs .container{
@@ -200,7 +255,7 @@ nav ul li:nth-child(2){
 }
 
 .chair-box{
-	margin-top: 40px;
+	margin-top: 25px;
 	height: 250px;
 	background-position: center;
 	background-size: cover;
@@ -210,7 +265,7 @@ nav ul li:nth-child(2){
 }
 
 .chair-box:nth-child(2){
-	margin: 40px 25px 0 25px;
+	margin: 25px 25px 0 25px;
 	background-image: url("../images/box2_img.jpg");
 }
 
@@ -269,6 +324,7 @@ nav ul li:nth-child(2){
 	font-size: 24px;
 	font-weight: 400;
 	background-color: #f9f9f9;
+	transition-duration:1s;
 }
 
 .price-box > .green{
@@ -320,6 +376,28 @@ nav ul li:nth-child(2){
 	margin: 0 auto;
 }
 
+.big-circle p{
+	margin-top:20px;
+	float: left;
+	text-transform: uppercase;
+	color: #787878;
+	font-weight: 900;
+}
+.big-price{
+	font-size: 50px;
+	line-height: 50px;
+}
+
+.small-price{
+	font-size:10px;
+	line-height:10px;
+}
+
+.time-price{
+	font-size: 16px;
+	line-height:16px;
+}
+
 .price-list{
 	margin-top: 30px;
 	list-style: none;
@@ -347,6 +425,40 @@ nav ul li:nth-child(2){
 	color: #FFF;
 	font-size: 18px;
 	font-weight: 100;
+}
+
+
+.price-box:hover{
+	background-color: #27c7ab;
+	border-color: #27c7ab;
+}
+
+.price-box:hover > .green{
+	color: #FFF;
+}
+
+.price-box:hover .big-circle{
+	border: none;
+}
+
+.price-box:hover .big-circle p{
+	color: #27c7ab;
+	padding:2px;
+}
+
+.price-box:hover .price-list li:nth-child(2n+1){
+	background-color: #FFF;
+}
+.price-box:hover .price-button{
+	background-color: #FFF;
+	color: #27c7ab;
+}
+.price-box:hover .circle{
+	background-color: #27c7ab;
+	border-color: #27c7ab;
+}
+.price-box:hover .circle:before{
+	background-color: #FFF;
 }
 
 #contact h2 .headers-span{
@@ -427,5 +539,27 @@ textarea{
 footer{
 	width: 100%;
 	height: 150px;
+	line-height: 150px;
+	color: #9b9b9b;
 }
 
+footer p:nth-child(1){
+	float: left;
+}
+
+footer p:nth-child(2){
+	float: right;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+footer .container{
+	position: relative;
+}
+	
+#icon-box{
+	height: 35px;
+	margin-top: 5px;
+	float: right;
+	margin-right: 50px;
+}
