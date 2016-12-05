@@ -34,6 +34,7 @@
 	font-style: normal;
 }
 
+
 *{
 	margin: 0;
 	padding: 0;
@@ -214,10 +215,11 @@ header ol > li > ul li{
 	background-color: #FFF;
 	color: #27c7ab;
 	transition-duration: 200ms;
+	border: 2px solid #27c7ab;
 }
 .slidernav{
 	font-size: 90px;
-	font-weight: 900;
+	font-weight: 100;
 	z-index: 3;
 }
 
@@ -272,9 +274,10 @@ header ol > li > ul li{
 .chair-box:nth-child(3){
 	background-color: #FFF;
 	border: 1px solid lightGray;
+	height: 270px;
 }
 .chair-box:nth-child(3) h2{
-	padding: 20px;
+	padding: 15px 20px 20px 20px;
 	font-size: 20px;
 }
 
@@ -391,6 +394,7 @@ header ol > li > ul li{
 .small-price{
 	font-size:10px;
 	line-height:10px;
+	vertical-align: top;
 }
 
 .time-price{
@@ -512,7 +516,11 @@ textarea{
 	padding: 2px;
 	float: left;
 	width: 50px;
+	height: 50px;
 	border: 1px solid #27c7ab;
+	background-image: url("../images/form_ok.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #contact-right p{
@@ -525,8 +533,8 @@ textarea{
 #contact-right button{
 	float: left;
 	width: 350px;
-	height: 78px;
-	margin: 30px 0 0 0;
+	height: 75px;
+	margin: 25px 0 0 0;
 	border: none;
 	color: white;
 	background-color: #27c7ab;
@@ -534,6 +542,13 @@ textarea{
 	text-transform: uppercase;
 	border-radius: 7px;
 	letter-spacing: 1px;
+}
+
+#contact-right button:hover{
+	background-color: #FFF;
+	color: #27c7ab;
+	transition-duration: 200ms;
+	border: 2px solid #27c7ab;
 }
 
 footer{
